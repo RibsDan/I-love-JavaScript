@@ -10,16 +10,11 @@ const div = document.createElement('div');
 for(let i = 0; i < elementos.length; i++) {
     let {tag, texto} = elementos[i]
     let tagCriada = document.createElement(tag);
-    tagCriada.innerText = texto;
+    tagCriada.innerText = texto; //Outraforma=>let textoCriado=document.createTextNode(texto); 
+                                 //tagCriada.appendChild(textoCriado);  
     div.appendChild(tagCriada);
 };
 container.appendChild(div);
 
-// for(let i = 0; i < elementos.length; i++) {
-//     let {tag, texto} = elementos[i]
-//     let tagCriada = document.createElement(tag);
-// outraforma =>|    let textoCriado = document.createTextNode(texto); 
-//              |   tagCriada.appendChild(textoCriado);    
-//     div.appendChild(tagCriada);
-// };
-// container.appendChild(div);
+
+  
