@@ -6,7 +6,6 @@
 //Numero não é divisível por 3 e 5 = retorna o própio número.
 //Checar se o número é realmente um número não sendo retorna oque for.
 //Usar iteração de 0 a 100
-//algo mudou
 
 function fizzBuzz(n) {
   if(typeof n !== 'number') return n;
