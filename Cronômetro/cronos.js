@@ -1,44 +1,48 @@
 window.onload = function () {
 
-    let seconds = 00;
-    let tens = 00;
+    var seconds = 00;
+    var tens = 00;
 
-    let appendTens = document.querySelector('.tens');
-    let appendSeconds = document.querySelector('.seconds');
-    let buttonStart = document.querySelector('.buttonStart');
-    let buttonStop = document.querySelector('.buttonStop');
-    let buttonReset = document.querySelector('.buttonReset');
+    var pegaTens = document.getElementById("tens");
+    var pegaSec = document.getElementById("seconds");
+    var pegaInic = document.getElementById('button-start');
+    var pegaPara = document.getElementById('button-stop');
+    var pegaRese = document.getElementById('button-reset');
+    var Interval;
+    pegaInic.onclick = function () {
 
-    buttonStart.onclick = function () {
         clearInterval(Interval);
         Interval = setInterval(startTimer, 10);
     }
-    buttonStop.onclick = function () {
+    pegaPara.onclick = function () {
         clearInterval(Interval);
     }
-    buttonReset.onclick = function () {
+    pegaRese.onclick = function () {
         clearInterval(Interval);
         seconds = "00";
         tens = "00";
-        appendTens.innerHTML = tens;
-        appendSeconds.innerHTML = seconds;
+        pegaTens.innerHTML = tens;
+        pegaSec.innerHTML = seconds;
     }
 
-    function começaContar() {
+    function startTimer() {
         tens++;
 
         if(tens <= 9) {
-            appendTens.innerHTML = "0" + tens;
+            pegaTens.innerHTML = "0" + tens;
          }
+        if(tens > 9) {
+            pegaTens.innerHTML = tens;
+        }
         if(tens > 99) {
             console.log("seconds");
             seconds++;
-            appendSeconds.innerHTML = "0" + seconds;
-            minuto = 0;
-            appendTens.innerHTML = "0" +  0;
+            pegaSec.innerHTML = "0" + seconds;
+            tens = 0;
+            pegaTens.innerHTML = "0" +  0;
         }
         if(seconds > 9) {
-            appendTens.innerHTML = seconds;
+            pegaSec.innerHTML = seconds;
         }
     }
 
