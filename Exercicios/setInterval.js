@@ -9,4 +9,6 @@ function mostraHora() {
 function funcaoDoInterval() {
     console.log(mostraHora());
 };
-setInterval(funcaoDoInterval, 1000);
+setInterval(function() {
+  console.log (mostraHora());
+} , 1000)
