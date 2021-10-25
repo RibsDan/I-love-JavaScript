@@ -32,9 +32,9 @@ function criaPessoa(nome, sobrenome, a, p) {
   };
 }
 
-const p1 = criaPessoa('Luiz', 'Otávio', 1.8, 80);
-const p2 = criaPessoa('João', 'Otávio', 1.90, 57);
-const p3 = criaPessoa('Junior', 'Otávio', 1.5, 110);
+const p1 = criaPessoa('Daniel', 'Ribeiro', 1.8, 80);
+const p2 = criaPessoa('Niva', 'Silva', 1.90, 57);
+const p3 = criaPessoa('Nathan', 'Castro', 1.5, 110);
 
 console.log(p1.imc);
 console.log(p2.imc);
